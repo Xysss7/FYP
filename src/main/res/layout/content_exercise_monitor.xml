@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="unnc.fyp.exercisehelper.ExerciseMonitorActivity"
+    tools:showIn="@layout/activity_exercise_monitor">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+
+            android:id="@+id/exercise_record_list"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/exercise_data_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+
+                    android:textSize="26dp"
+                    android:typeface="serif"
+                    android:textColor="@color/textColor_black"
+                    android:text="Treadmill"/>
+
+                <TextView
+                    android:id="@+id/exercise_data_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/exercise_data_name"
+                    android:textSize="14dp"
+                    android:text="Music - ALONE   Treadmill - 1540m"/>
+
+                <TextView
+                    android:id="@+id/exercise_data_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/exercise_data_comment"
+                    android:textSize="12dp"
+                    android:text="2019/4/11"/>
+
+                <ImageView
+                    android:id="@+id/exercise_data_heartrate"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@id/exercise_data_time"
+
+                    android:src="@drawable/heartrate_pic1"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

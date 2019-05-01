@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#EE7600</color>
+    <color name="colorPrimaryDark">#ff9933</color>
+    <color name="colorAccent">#ffcc66</color>
+
+    <color name="whiteSmoke">#F5F5F5</color>
+    <color name="textColor">#363636</color>
+    <color name="textColor_red">#ff0000</color>
+    <color name="textColor_blue">#4682B4</color> <!-- steelblue 70 130 180 -->
+    <color name="seagreen">#2E8B57</color> <!-- seagreen4 46 139 87 -->
+    <color name="textColor_black">#363636</color> <!-- grey21 54 54 54 -->
+    <color name="textColor_orange">#FF7F24</color> <!-- Chocolate1 255 127 36 -->
+    <color name="textColor_pink">#EE6363</color> <!-- IndianRed2 238 99 99 -->
+    <color name="textColor_purple">#BA55D3</color> <!-- MediumOrchid 186 85 211 -->
+    <color name="textColor_gray">#CDC9C9</color> <!-- Snow3 205 201 201 -->
+    <color name="textColor_yellow">#FFEC8B</color> <!-- LightGoldenrod1 255 236 139 -->
+</resources>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="unnc.fyp.exercisehelper.AddRecordActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="Exercise name:"
+                />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner_exercise_add">
+            </Spinner>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="16dp"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="Comments:"
+                />
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <AutoCompleteTextView
+                    android:id="@+id/comment_add"
+                    android:layout_marginTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="e.g. 1400m Music: Alone. Tired."
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="16dp"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="Date:"
+                />
+
+            <!--
+            <DatePicker
+                android:id="@+id/datePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="false"
+                />
+-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/mDatePicker"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="16dp"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:text="Date selector (click here)"
+                />
+
+
+            <Button
+                android:id="@+id/BtnSaveRecord"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="ADD"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

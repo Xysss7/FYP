@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="unnc.fyp.exercisehelper.MusicActivity"
+    tools:showIn="@layout/activity_music">
+
+    <ImageView
+        android:layout_margin="10dp"
+        android:id="@+id/music_intm_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_menu_gallery"/>
+    <TextView
+        android:id="@+id/music_intm_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/music_intm_image"
+        android:layout_margin="10dp"
+        android:text="Marriage d' amour"/>
+    <TextView
+        android:id="@+id/music_intm_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/music_intm_image"
+        android:layout_below="@id/music_intm_text"
+        android:layout_marginLeft="10dp"
+        android:text="Richard Clayderman"/>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="unnc.fyp.exercisehelper.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <!--style="?android:textAppearanceSmall"-->
+
+            <Button
+                android:id="@+id/BtnFastMusic"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dp"
+                android:text="Fast Tempos"
+                android:textColor="@color/whiteSmoke"
+                android:background="@drawable/shape"
+
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/BtnSlowMusic"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="Slow Tempos"
+                android:background="@drawable/shape"
+                android:textColor="@color/whiteSmoke"
+                android:textStyle="bold"/>
+            <!--
+                            <Button
+                                android:id="@+id/Btn_comment"
+                                style="?android:textAppearanceSmall"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="COMMENT"
+                                android:textStyle="bold"/>
+            -->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:layout_width="172dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:id="@+id/spinner_exercise">
+            </Spinner>
+
+            <Spinner
+                android:layout_width="142dp"
+                android:layout_height="40dp"
+                android:id="@+id/spinner_bpm">
+            </Spinner>
+        </LinearLayout>
+
+
+
+        <!-- Pre-selected musics -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_marginTop="6dp"
+            android:layout_height="460dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/music_list"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:id="@+id/slow_music_1"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_margin="10dp"
+                        android:id="@+id/music_intm_image"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/slow_music_pic1"/>
+                    <TextView
+                        android:id="@+id/music_intm_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/music_intm_image"
+                        android:layout_margin="10dp"
+                        android:textSize="16dp"
+                        android:textColor="@color/textColor_black"
+                        android:text="Marriage d' amour"/>
+                    <TextView
+                        android:id="@+id/music_intm_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/music_intm_image"
+                        android:layout_below="@id/music_intm_name"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="12dp"
+                        android:text="Richard Clayderman"/>
+                    <TextView
+                        android:id="@+id/music_intm_bmp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/music_intm_image"
+                        android:layout_below="@id/music_intm_text"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="12dp"
+                        android:text="Average BPM - 57"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:id="@+id/slow_music_2"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_margin="10dp"
+                        android:id="@+id/music_intm_image2"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/slow_music_pic2"/>
+                    <TextView
+                        android:id="@+id/music_intm_name2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/music_intm_image2"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/textColor_black"
+                        android:textSize="16dp"
+                        android:text="Ballade Pour Adeline"/>
+                    <TextView
+                        android:id="@+id/music_intm_text2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/music_intm_image2"
+                        android:layout_below="@id/music_intm_name2"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="12dp"
+                        android:text="Richard Clayderman"/>
+                    <TextView
+                        android:id="@+id/music_intm_bmp2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/music_intm_image2"
+                        android:layout_below="@id/music_intm_text2"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="12dp"
+                        android:text="Average BPM - 68"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:id="@+id/slow_music_3"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_margin="10dp"
+                        android:id="@+id/music_intm_image3"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/slow_music_pic3"/>
+                    <TextView
+                        android:id="@+id/music_intm_name3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/music_intm_image3"
+                        android:layout_margin="10dp"
+                        android:textSize="16dp"
+                        android:textColor="@color/textColor_black"
+                        android:text="ＡＬＯＮＥ"/>
+                    <TextView
+                        android:id="@+id/music_intm_text3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/music_intm_image3"
+                        android:layout_below="@id/music_intm_name3"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="12dp"
+                        android:text="ＴＲＡ＄Ｈ"/>
+                    <TextView
+                        android:id="@+id/music_intm_bmp3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/music_intm_image3"
+                        android:layout_below="@id/music_intm_text3"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="12dp"
+                        android:text="Average BPM - 53"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:id="@+id/slow_music_4"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_margin="10dp"
+                        android:id="@+id/music_intm_image4"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/slow_music_pic4"/>
+                    <TextView
+                        android:id="@+id/music_intm_name4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/music_intm_image4"
+                        android:layout_margin="10dp"
+                        android:textSize="16dp"
+                        android:textColor="@color/textColor_black"
+                        android:text="cherry blossom scatter"/>
+                    <TextView
+                        android:id="@+id/music_intm_text4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/music_intm_image4"
+                        android:layout_below="@id/music_intm_name4"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="12dp"
+                        android:text="hisohkah"/>
+                    <TextView
+                        android:id="@+id/music_intm_bmp4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/music_intm_image4"
+                        android:layout_below="@id/music_intm_text4"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="12dp"
+                        android:text="Average BPM - 70"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:id="@+id/fast_music_2"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_margin="10dp"
+                        android:id="@+id/fast_music_intm_image2"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/fast_music_pic2"/>
+                    <TextView
+                        android:id="@+id/fast_music_intm_name2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/fast_music_intm_image2"
+                        android:layout_margin="10dp"
+                        android:textSize="16dp"
+                        android:textColor="@color/textColor_black"
+                        android:text="Faded"/>
+                    <TextView
+                        android:id="@+id/fast_music_intm_text2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/fast_music_intm_image2"
+                        android:layout_below="@id/fast_music_intm_name2"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="12dp"
+                        android:text="Alan Walker"/>
+                    <TextView
+                        android:id="@+id/fast_music_intm_bmp2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/fast_music_intm_image2"
+                        android:layout_below="@id/fast_music_intm_text2"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="12dp"
+                        android:text="Average BPM - 90"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:id="@+id/fast_music_1"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_margin="10dp"
+                        android:id="@+id/fast_music_intm_image1"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/fast_music_pic1"/>
+                    <TextView
+                        android:id="@+id/fast_music_intm_name1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/fast_music_intm_image1"
+                        android:layout_margin="10dp"
+                        android:textSize="16dp"
+                        android:textColor="@color/textColor_black"
+                        android:text="Shivers"/>
+                    <TextView
+                        android:id="@+id/fast_music_intm_text1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/fast_music_intm_image1"
+                        android:layout_below="@id/fast_music_intm_name1"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="12dp"
+                        android:text="LARSM"/>
+                    <TextView
+                        android:id="@+id/fast_music_intm_bmp1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/fast_music_intm_image1"
+                        android:layout_below="@id/fast_music_intm_text1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="12dp"
+                        android:text="Average BPM - 128"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:id="@+id/fast_music_3"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_margin="10dp"
+                        android:id="@+id/fast_music_intm_image3"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/fast_music_pic3"/>
+                    <TextView
+                        android:id="@+id/fast_music_intm_name3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/fast_music_intm_image3"
+                        android:layout_margin="10dp"
+                        android:textSize="16dp"
+                        android:textColor="@color/textColor_black"
+                        android:text="Left Behind"/>
+                    <TextView
+                        android:id="@+id/fast_music_intm_text3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/fast_music_intm_image3"
+                        android:layout_below="@id/fast_music_intm_name3"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="12dp"
+                        android:text="Ahrix"/>
+                    <TextView
+                        android:id="@+id/fast_music_intm_bmp3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/fast_music_intm_image3"
+                        android:layout_below="@id/fast_music_intm_text3"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="12dp"
+                        android:text="Average BPM - 128"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:id="@+id/fast_music_4"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_margin="10dp"
+                        android:id="@+id/fast_music_intm_image4"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/fast_music_pic4"/>
+                    <TextView
+                        android:id="@+id/fast_music_intm_name4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/fast_music_intm_image4"
+                        android:layout_margin="10dp"
+                        android:textSize="16dp"
+                        android:textColor="@color/textColor_black"
+                        android:text="New Era"/>
+                    <TextView
+                        android:id="@+id/fast_music_intm_text4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/fast_music_intm_image4"
+                        android:layout_below="@id/fast_music_intm_name4"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="12dp"
+                        android:text="Ahrix"/>
+                    <TextView
+                        android:id="@+id/fast_music_intm_bmp4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/fast_music_intm_image4"
+                        android:layout_below="@id/fast_music_intm_text4"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="12dp"
+                        android:text="Average BPM - 128"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:id="@+id/fast_music_5"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_margin="10dp"
+                        android:id="@+id/fast_music_intm_image5"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/fast_music_pic5"/>
+                    <TextView
+                        android:id="@+id/fast_music_intm_name5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/fast_music_intm_image5"
+                        android:layout_margin="10dp"
+                        android:textSize="16dp"
+                        android:textColor="@color/textColor_black"
+                        android:text="Spirit Of Life"/>
+                    <TextView
+                        android:id="@+id/fast_music_intm_text5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/fast_music_intm_image5"
+                        android:layout_below="@id/fast_music_intm_name5"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="12dp"
+                        android:text="Blackmill"/>
+                    <TextView
+                        android:id="@+id/fast_music_intm_bmp5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/fast_music_intm_image5"
+                        android:layout_below="@id/fast_music_intm_text5"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="12dp"
+                        android:text="Average BPM - 139"/>
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+        <!-- Enter a link of podcast -->
+
+        <!--
+
+        <EditText
+            android:id="@+id/podcast_link_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/music_input"
+            android:inputType="text"
+            android:maxLines="1"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/textColor"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/Btn_input_link"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="PLAY" />
+    -->
+
+
+        <!-- Music status -->
+        <!--
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="16dp"
+            android:id="@+id/MusicStatus"/>-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:orientation="vertical">
+            <!--android:layout_below="@id/music_list"-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_marginTop="12dp"
+                android:gravity="center_horizontal">
+
+                <!-- current progess -->
+                <TextView
+                    android:id="@+id/MusicTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00" />
+
+                <SeekBar
+                    android:layout_width="230sp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/MusicSeekBar"
+                    android:layout_weight="1"
+                    android:max="100"
+                    android:layout_marginTop="2dp"
+                    android:layout_toRightOf="@+id/MusicTime"/>
+
+                <!-- Total length -->
+                <TextView
+                    android:id="@+id/MusicTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:layout_toRightOf="@+id/MusicSeekBar"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <!--style="?android:textAppearanceSmall"-->
+
+                <Button
+                    android:id="@+id/BtnPlayOrPause"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="17dp"
+                    android:text="PLAY"
+                    android:textColor="@color/whiteSmoke"
+                    android:background="@drawable/shape"
+
+                    android:textStyle="bold"/>
+
+                <Button
+                    android:id="@+id/BtnStop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:text="STOP"
+                    android:background="@drawable/shape"
+                    android:textColor="@color/whiteSmoke"
+                    android:textStyle="bold"/>
+<!--
+                <Button
+                    android:id="@+id/Btn_comment"
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="COMMENT"
+                    android:textStyle="bold"/>
+-->
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!--
+
+        <Button
+            android:id="@+id/Btn_quit"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="QUIT" />
+
+    -->
+    </LinearLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>
